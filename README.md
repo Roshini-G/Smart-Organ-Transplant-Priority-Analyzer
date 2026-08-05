@@ -119,36 +119,33 @@ The objective is **not to replace medical professionals**, but to assist them by
 
 The Smart Organ Transplant Priority Analyzer follows a structured Artificial Intelligence and Machine Learning workflow to provide transparent, data-driven decision support for organ transplant prioritization.
 
-```text
-                Patient Medical Data
-                        │
-                        ▼
-              Data Preprocessing
-        (Cleaning & Feature Preparation)
-                        │
-                        ▼
-          Medical Parameter Validation
-                        │
-                        ▼
-     Structured Analytic Hierarchy Process
-                 (SAHP Weighting)
-                        │
-                        ▼
-        Machine Learning Prediction
-            (Random Forest Model)
-                        │
-                        ▼
-      Explainable AI Interpretation
-              (SHAP Analysis)
-                        │
-                        ▼
-      Patient Priority Score Generation
-                        │
-                        ▼
-          Ranked Patient List
-                        │
-                        ▼
-     Final Clinical Decision Support
+```mermaid
+flowchart TD
+
+A["Patient Medical Data"]
+--> B["Data Preprocessing"]
+
+B --> C["Medical Parameter Validation"]
+
+C --> D["SAHP Weight Calculation"]
+
+D --> E["Random Forest Prediction"]
+
+E --> F["SHAP Explainability"]
+
+F --> G["Priority Score Generation"]
+
+G --> H["Ranked Patient List"]
+
+H --> I["Clinical Decision Support Dashboard"]
+
+classDef process fill:#E3F2FD,stroke:#1565C0,color:#000;
+classDef ai fill:#E8F5E9,stroke:#2E7D32,color:#000;
+classDef output fill:#FFF3E0,stroke:#EF6C00,color:#000;
+
+class A,B,C process;
+class D,E,F ai;
+class G,H,I output;
 ```
 
 ### 🔍 Workflow Description
