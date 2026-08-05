@@ -119,25 +119,36 @@ The objective is **not to replace medical professionals**, but to assist them by
 
 The Smart Organ Transplant Priority Analyzer follows a structured Artificial Intelligence and Machine Learning workflow to provide transparent, data-driven decision support for organ transplant prioritization.
 
-```mermaid
-flowchart TD
-
-A[Patient Medical Data]
---> B[Data Preprocessing]
-
-B --> C[Medical Parameter Validation]
-
-C --> D[SAHP Weight Calculation]
-
-D --> E[Random Forest Prediction]
-
-E --> F[SHAP Explainability]
-
-F --> G[Priority Score Generation]
-
-G --> H[Ranked Patient List]
-
-H --> I[Clinical Decision Support Dashboard]
+```text
+                Patient Medical Data
+                        │
+                        ▼
+              Data Preprocessing
+        (Cleaning & Feature Preparation)
+                        │
+                        ▼
+          Medical Parameter Validation
+                        │
+                        ▼
+     Structured Analytic Hierarchy Process
+                 (SAHP Weighting)
+                        │
+                        ▼
+        Machine Learning Prediction
+            (Random Forest Model)
+                        │
+                        ▼
+      Explainable AI Interpretation
+              (SHAP Analysis)
+                        │
+                        ▼
+      Patient Priority Score Generation
+                        │
+                        ▼
+          Ranked Patient List
+                        │
+                        ▼
+     Final Clinical Decision Support
 ```
 
 ### 🔍 Workflow Description
@@ -176,7 +187,6 @@ The Smart Organ Transplant Priority Analyzer follows a structured Artificial Int
 - Provides explainable recommendations to support clinicians in making informed, transparent, and data-driven decisions.
 
 > **Note:** The current version primarily focuses on the frontend prototype. Backend integration, Machine Learning execution, SAHP computation, SHAP analysis, and database connectivity are planned for future development.
-
 ---
 
 # 🏗️ System Architecture
