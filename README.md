@@ -112,3 +112,67 @@ The objective is **not to replace medical professionals**, but to assist them by
 - Decision summaries
 - Explainable AI reports
 - Export-ready analytics
+
+---
+
+# 🧠 AI & ML Pipeline
+
+The Smart Organ Transplant Priority Analyzer follows a structured Artificial Intelligence and Machine Learning workflow to provide transparent, data-driven decision support for organ transplant prioritization.
+
+```mermaid
+flowchart TD
+
+A[Patient Medical Data]
+--> B[Data Preprocessing]
+
+B --> C[Medical Parameter Validation]
+
+C --> D[SAHP Weight Calculation]
+
+D --> E[Random Forest Prediction]
+
+E --> F[SHAP Explainability]
+
+F --> G[Priority Score Generation]
+
+G --> H[Ranked Patient List]
+
+H --> I[Clinical Decision Support Dashboard]
+```
+
+### 🔍 Workflow Description
+
+The Smart Organ Transplant Priority Analyzer follows a structured Artificial Intelligence and Decision Support workflow to assist healthcare professionals in prioritizing organ transplant recipients.
+
+#### 1️⃣ Patient Data Collection
+- Collects demographic information, medical history, laboratory reports, and clinical parameters.
+- Ensures all required patient information is available for analysis.
+
+#### 2️⃣ Data Preprocessing
+- Cleans and validates patient records.
+- Handles missing or inconsistent values.
+- Prepares the dataset for analysis and prediction.
+
+#### 3️⃣ SAHP-Based Criteria Weighting
+- Applies the **Structured Analytic Hierarchy Process (SAHP)** to assign weights to multiple clinical criteria.
+- Supports transparent multi-criteria decision making based on medical importance.
+
+#### 4️⃣ Machine Learning Prediction
+- Uses a **Random Forest** model to estimate the transplant priority of each patient.
+- Identifies patterns from historical medical data to support decision making.
+
+#### 5️⃣ Explainable AI (SHAP)
+- Generates explanations for every prediction.
+- Highlights the contribution of each clinical feature towards the final prediction.
+- Improves transparency and clinician trust.
+
+#### 6️⃣ Patient Priority Ranking
+- Combines Machine Learning prediction with SAHP weighting.
+- Calculates an overall priority score.
+- Produces a ranked list of transplant candidates.
+
+#### 7️⃣ Clinical Decision Support
+- Displays ranked patients through an interactive healthcare dashboard.
+- Provides explainable recommendations to support clinicians in making informed, transparent, and data-driven decisions.
+
+> **Note:** The current version primarily focuses on the frontend prototype. Backend integration, Machine Learning execution, SAHP computation, SHAP analysis, and database connectivity are planned for future development.
