@@ -1,6 +1,6 @@
 # 🏥 Smart Organ Transplant Priority Analyzer
 
-> **An AI-powered healthcare decision support system that assists medical professionals in prioritizing organ transplant recipients using Machine Learning, Structured Analytic Hierarchy Process (SAHP), and Explainable Artificial Intelligence (SHAP).**
+>  **An intelligent healthcare decision support platform that leverages Artificial Intelligence, Machine Learning, Structured Analytic Hierarchy Process (SAHP), and Explainable AI (SHAP) to assist clinicians in prioritizing organ transplant recipients through transparent and data-driven decision making.**
 
 <p align="center">
 
