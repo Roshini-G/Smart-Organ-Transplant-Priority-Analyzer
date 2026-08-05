@@ -176,3 +176,72 @@ The Smart Organ Transplant Priority Analyzer follows a structured Artificial Int
 - Provides explainable recommendations to support clinicians in making informed, transparent, and data-driven decisions.
 
 > **Note:** The current version primarily focuses on the frontend prototype. Backend integration, Machine Learning execution, SAHP computation, SHAP analysis, and database connectivity are planned for future development.
+
+---
+
+# 🏗️ System Architecture
+
+The Smart Organ Transplant Priority Analyzer follows a modular and scalable architecture that separates the presentation layer, backend services, machine learning engine, decision support modules, and database. This design ensures maintainability, scalability, and transparency while supporting intelligent healthcare decision-making.
+
+```mermaid
+flowchart TD
+
+A[👨‍⚕️ Doctor / Hospital Administrator]
+
+A --> B[🌐 React + Vite Frontend]
+
+B --> C[⚙️ Flask REST API]
+
+C --> D[🗄️ Database]
+
+C --> E[🤖 Machine Learning Engine]
+
+E --> F[🌲 Random Forest Model]
+
+F --> G[🔍 SHAP Explainability]
+
+C --> H[📊 SAHP Decision Engine]
+
+G --> I[📈 Priority Score]
+
+H --> I
+
+D --> I
+
+I --> J[🏥 Ranked Patient Dashboard]
+
+J --> K[📄 Reports & Analytics]
+```
+
+## 🧩 Architecture Layers
+
+### 🖥️ Presentation Layer
+Provides an intuitive healthcare interface for clinicians to manage patient information, visualize predictions, review rankings, and access analytical reports.
+
+### ⚙️ Application Layer *(Planned)*
+Acts as the communication layer between the frontend, Machine Learning engine, SAHP module, SHAP analysis, and database through RESTful APIs developed using Flask.
+
+### 🤖 Machine Learning Layer *(Planned)*
+Implements a Random Forest model to predict transplant priority based on patient clinical parameters.
+
+### 📊 Decision Support Layer *(Planned)*
+Uses the Structured Analytic Hierarchy Process (SAHP) to calculate weighted clinical importance and improve prioritization fairness.
+
+### 🔍 Explainable AI Layer *(Planned)*
+Generates SHAP explanations to illustrate how each clinical feature contributes to the final prediction, increasing transparency and trust.
+
+### 🗄️ Data Layer *(Planned)*
+Stores patient records, prediction history, reports, and clinical data securely using a relational database.
+
+---
+
+## 🔄 Overall Workflow
+
+1. Patient information is entered by the healthcare professional.
+2. The system validates and preprocesses the patient data.
+3. Clinical criteria are weighted using SAHP.
+4. The Machine Learning model predicts transplant priority.
+5. SHAP generates feature-level explanations.
+6. A final priority score is calculated.
+7. Ranked patient results are displayed.
+8. Reports and analytics support clinical decision-making.
